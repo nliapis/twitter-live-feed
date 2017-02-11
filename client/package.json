@@ -1,0 +1,26 @@
+{
+  "name": "lookup-client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3001/",
+  "devDependencies": {
+    "enzyme": "^2.4.1",
+    "node-sass": "^4.5.0",
+    "react-addons-test-utils": "^15.4.0",
+    "react-bootstrap": "^0.30.7",
+    "react-scripts": "0.7.0"
+  },
+  "dependencies": {
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-linkify": "^0.2.0"
+  },
+  "scripts": {
+    "start": "npm run watch-css & react-scripts start",
+    "build": "npm run build-css && react-scripts build",
+    "build-css": "node-sass src/sass/main.scss src/index.css",
+    "watch-css": "node-sass src/sass/main.scss src/index.css -w",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

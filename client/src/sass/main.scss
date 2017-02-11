@@ -1,0 +1,35 @@
+@import "bootstrap-sass/assets/stylesheets/_bootstrap-sprockets";
+@import "bootstrap-sass/assets/stylesheets/_bootstrap";
+$basic-color: #292f33;
+
+@import 'tweet';
+@import 'style';
+@import 'loader';
+
+
+.trends-button {
+  margin: 2px;
+}
+
+.hashtag-form {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  .input-group-lg > .input-group-btn > .btn,
+  .input-group-addon.input-lg,
+  .input-group-lg > .input-group-addon,
+  .input-group-lg > .input-group-btn > .input-group-addon.btn {
+    border-radius: 0;
+  }
+
+  .icon-search2 {
+    font-size: 26px;
+  }
+}
+
+.layout-container {
+  margin: 80px auto;
+}

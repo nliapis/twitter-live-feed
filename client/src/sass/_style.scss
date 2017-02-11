@@ -1,0 +1,80 @@
+$icomoon-font-path: "fonts" !default;
+
+$icon-search2: "\e904";
+$icon-search: "\e903";
+$icon-twitter: "\e900";
+$icon-brand: "\e900";
+$icon-tweet: "\e900";
+$icon-social: "\e900";
+$icon-linkedin: "\e902";
+$icon-facebook: "\e901";
+$icon-facebook-f: "\e901";
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("data:application/x-font-ttf;charset=utf-8;base64,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") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search2 {
+  &:before {
+    content: $icon-search2;
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search;
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter;
+  }
+}
+.icon-brand {
+  &:before {
+    content: $icon-brand;
+  }
+}
+.icon-tweet {
+  &:before {
+    content: $icon-tweet;
+  }
+}
+.icon-social {
+  &:before {
+    content: $icon-social;
+  }
+}
+.icon-linkedin {
+  &:before {
+    content: $icon-linkedin;
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook;
+  }
+}
+.icon-facebook-f {
+  &:before {
+    content: $icon-facebook-f;
+  }
+}
+
