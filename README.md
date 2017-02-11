@@ -3,6 +3,7 @@
 ## Running locally
 
 ```
+git clone https://github.com/nliapis/twitter-live-feed.git
 cd twitter-live-feed
 npm i
 
