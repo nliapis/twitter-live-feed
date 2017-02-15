@@ -126,5 +126,5 @@ Let's create an image named routed-react:
 
 Finally, start a container named routed-react-instance at port 80.
 
-```docker run -p 80:9000 --name tweeter-live-feed-instance tweeter-live-feed
+```docker run -p 80:3000 --name tweeter-live-feed-instance tweeter-live-feed
 
