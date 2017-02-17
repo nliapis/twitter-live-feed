@@ -1,4 +1,4 @@
-function search(query, cb) {
+function fetchTweets(query, cb) {
   let api = '';
   if (query.indexOf('?max_id') === -1) {
     api = `api/tweets?q=${query}`
@@ -8,8 +8,7 @@ function search(query, cb) {
   return fetch(api, {
     accept: 'application/json',
   }).then(checkStatus)
-    .then(parseJSON)
-    .then(cb);
+    .then(parseJSON);
 }
 
 function fetchTrends(cb) {
@@ -35,5 +34,5 @@ function parseJSON(response) {
   return response.json();
 }
 
-const Client = { search, fetchTrends };
+const Client = { fetchTweets, fetchTrends };
 export default Client;

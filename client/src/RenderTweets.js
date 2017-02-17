@@ -42,7 +42,6 @@ const RenderTweets = React.createClass({
             </div>
           </div>
         </li>
-
       )
     ))
   },

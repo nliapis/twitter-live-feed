@@ -5,10 +5,12 @@
   "proxy": "http://localhost:3001/",
   "devDependencies": {
     "enzyme": "^2.4.1",
+    "immutable": "^3.8.1",
     "node-sass": "^4.5.0",
     "react-addons-test-utils": "^15.4.0",
     "react-bootstrap": "^0.30.7",
-    "react-scripts": "0.7.0"
+    "react-scripts": "0.7.0",
+    "reflux": "^6.2.0"
   },
   "dependencies": {
     "react": "^15.4.0",
