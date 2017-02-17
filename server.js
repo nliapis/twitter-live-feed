@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+var ttt = require('dotenv').config()
+
 app.set('port', (process.env.PORT || 3001));
 
 // Express only serves static assets in production
@@ -16,26 +18,22 @@ const app_conf = {
   timeout_ms: 60*1000,  // optional HTTP request timeout to apply to all requests.
 }
 
-var Twit = require('twit');
-var T = new Twit(app_conf);
+const Twit = require('twit');
+const T = new Twit(app_conf);
 
 app.get('/api/tweets', function(req, res) {
   const param = req.query.q;
   const max_id = req.query.max_id;
 
-  switch (true) {
-    case ((!param) && (!max_id)):
-      res.json({
-        error: 'Missing required parameter `q` and `max_id`',
-      });
-      break;
-    case (!max_id):
-      searchTweets(param, res);
-      break;
-    default:
-      fetchMoreTweets(param, max_id, res);
-    }
-
+  if ((!param) && (!max_id)) {
+    res.json({
+      error: 'Missing required parameter `q` and `max_id`',
+    });
+  } else if (!max_id) {
+    searchTweets(param, res);
+  } else {
+    fetchMoreTweets(param, max_id, res);
+  }
 });
 
 function searchTweets(param, res) {
