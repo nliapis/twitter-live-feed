@@ -11,6 +11,9 @@ git clone https://github.com/nliapis/twitter-live-feed.git
 cd twitter-live-feed
 npm i
 
+# copy configuration and replace with your own twitter app keys
+cp .env.example .env
+
 cd client
 npm i
 
@@ -53,6 +56,32 @@ const apiBaseUrl = process.env.NODE_ENV === 'development' ? 'localhost:3001' : '
 ```
 
 This setup uses [concurrently](https://github.com/kimmobrunfeldt/concurrently) for process management. Executing `npm start` instructs `concurrently` to boot both the Webpack dev server and the API server.
+
+## Reflux Library
+
+The main function of Reflux is to introduce a more functional programming style architecture by eschewing MVC like pattern and adopting a single data flow pattern.
+
+```
++---------+       +--------+       +-----------------+
+¦ Actions ¦------>¦ Stores ¦------>¦ View Components ¦
++---------+       +--------+       +-----------------+
+     ^                                      ¦
+     +--------------------------------------+
+```
+
+### Actions
+
+```
+fetchTrends
+fetchTweets
+fetchMoreTweets
+```
+
+### Stores
+
+```
+TweetsStore
+```
 
 ## Deploying
 
