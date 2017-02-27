@@ -149,11 +149,11 @@ Heroku will give you a link at which to view your live app.
 
 Be sure to install Docker and start a Docker-machine if necessary.
 
-Let's create an image named routed-react:
+Let's create an image named tweeter-live-feed:
 
 ```docker build -t tweeter-live-feed .```
 
-Finally, start a container named routed-react-instance at port 80.
+Finally, start a container named tweeter-live-feed-instance at port 80.
 
 ```docker run -p 80:3000 --name tweeter-live-feed-instance tweeter-live-feed```
 
